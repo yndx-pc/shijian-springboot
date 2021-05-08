@@ -33,7 +33,7 @@ public class TestController {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        List<Map<String, Object>> list = jdbcTemplate.queryForList("select * from food_frugal_foods");
+        List<Map<String, Object>> list = jdbcTemplate.queryForList("select * from food_frugal_foods where votes is not null");
         printWriter.write(new ObjectMapper().writeValueAsString(list));
     }
 }
