@@ -22,7 +22,7 @@ public class TestController {
 
     PrintWriter printWriter = null;
 
-    @RequestMapping("/te")
+    @RequestMapping("/test")
     @ResponseBody
     public void index(HttpServletResponse response) throws JsonProcessingException {
         response.setContentType("application/json");
